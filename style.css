@@ -86,6 +86,14 @@ img {
   gap: 15px;
   margin-bottom: 14px;
 }
+.accessory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 15px;
+  margin-bottom: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
 
 .item-btn {
   border: none;
@@ -100,10 +108,12 @@ img {
   background-size: cover;
 }
 .accessory-img {
-  width: 120px;      /* or any size you want */
-  height: auto;      /* keeps natural ratio */
+  width: 100%;
+  max-width: 120px; /* optional */
+  height: auto;
   object-fit: contain;
 }
+
 /* Glow hover effect for accessories */
 .item-btn:hover .accessory-img {
   filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));

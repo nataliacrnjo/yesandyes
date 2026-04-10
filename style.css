@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 20px;
+  text-align: center;
+  color: #701601;
+  background-color: antiquewhite;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  width: 250px;     /* adjust size as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.img-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.site-logo {
+  width: 120px;       /* adjust size */
+  height: auto;
+  display: block;
+  margin: 20px auto;  /* centers the logo */
+  cursor: pointer;
+}
+
+.logo-link {
+  display: block;
+  text-align: center;
+}
+
+.btn-img {
+  width: 190px;   /* adjust size */
+  height: auto;
+  display: block;
+  transition: 0.2s ease;
+}
+
+/* Hover glow */
+.img-btn:hover .btn-img {
+  filter: drop-shadow(0 0 10px rgba(255, 111, 168, 0.8));
+  transform: scale(1.03);
+}
+
+
+/* Default button image */
+.btn-img {
+  width: 180px;
+  height: auto;
+  transition: 0.25s ease;
+}
+
+/* Disabled state */
+.img-btn[disabled] .btn-img {
+  opacity: 0.4;              /* faded */
+  filter: grayscale(100%);   /* optional grey look */
+  pointer-events: none;      /* prevents clicking */
+}
+
+/* Hover glow only when enabled */
+.img-btn:not([disabled]):hover .btn-img {
+  filter: drop-shadow(0 0 10px rgba(255, 111, 168, 0.8));
+  transform: scale(1.03);
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 14px;
+}
+
+.item-btn {
+  border: none;
+  background: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.item-img {
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+}
+.accessory-img {
+  width: 120px;      /* or any size you want */
+  height: auto;      /* keeps natural ratio */
+  object-fit: contain;
+}
+/* Glow hover effect for accessories */
+.item-btn:hover .accessory-img {
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+  transform: scale(1.05);
+  transition: 0.25s ease;
+}
+
+.flower-wrapper {
+    position: relative;
+}
+
+.badge {
+ position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  display: none; /* Initially hidden */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Slow spinning animation */
+@keyframes slowspin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: slowspin 12s linear infinite;
+    
+}
+
+.bouquet-wrapper {
+    position: relative;
+    width: 350px;
+    height: 600px; /* scaled from 4814px */
+    margin: auto;
+}
+
+/* Base layer */
+.layer {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* Accessory behind greenery */
+.accessory {
+    position: absolute;
+    width: 167px;     /* scaled from 1086px */
+    height: 312px;    /* scaled from 2026px */
+    left: 14px;       /* scaled from 89px */
+    top: 86px;        /* scaled from 557px */
+    transform: rotate(-11.24deg);
+    z-index: 1;       /* behind greenery */
+}
+
+/* Greenery (scaled) */
+.greenery {
+    width: 190px;   /* 1236 * 0.154 */
+    height: 323px;  /* 2099 * 0.154 */
+    left: 81px;     /* 524 * 0.154 */
+    top: 237px;     /* 1541 * 0.154 */
+   position: absolute;
+    z-index: 2;
+}
+.flower-slot {
+    position: absolute;
+    z-index: 3; /* above greenery */
+}
+
+/* Flower slots (scaled positions) */
+#slot1 { /* flower-12 */
+    width: 112px;
+    height: 112px;
+    left: 100px;
+    top: 263px;
+}
+
+#slot2 { /* flower-11 */
+    width: 112px;
+    height: 112px;
+    left: 187px;
+    top: 168px;
+}
+
+#slot3 { /* flower-8 */
+    width: 112px;
+    height: 112px;
+    left: 25px;
+    top: 318px;
+}
+
+#slot4 { /* flower-6 */
+    width: 112px;
+    height: 112px;
+    left: 225px;
+    top: 280px;
+}
+
+#slot5 { /* flower-4 */
+    width: 112px;
+    height: 112px;
+    left: 113px;
+    top: 150px;
+}
+
+#slot6 { /* flower-3 */
+    width: 112px;
+    height: 112px;
+    left: 19px;
+    top: 207px;
+}
+
+#slot7 { /* extra slot if user picks 7 flowers */
+    width: 112px;
+    height: 112px;
+    left: 160px;
+    top: 350px;
+}
+
+
+
+.note-tab {
+  position: absolute;
+  right: -8px;
+  top: 0;
+  background: #ffd83e;
+  padding: 6px 16px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+}
+
+.note-box {
+  display: none;
+  position: absolute;
+  right: 56px;
+  top: 0;
+  width: 150px;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 8px;
+}
+
+.locked-note {
+  background-color: #ececec;
+  cursor: not-allowed;
+}
+

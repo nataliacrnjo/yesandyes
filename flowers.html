@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Flowers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<a href="index.html" class="logo-link">
+  <img src="yes.png" alt="Logo" class="site-logo">
+</a>
+
+<body>
+  <h2>Select up to 7 Flowers</h2>
+<script>
+  localStorage.removeItem("flowers");
+</script>
+
+ <div id="flower-grid" class="grid"></div>
+
+ <button class="img-btn" onclick="clearSelection()">
+  <img src="buttons fl-02.png" class="btn-img">
+</button>
+ 
+<button id="next-btn" class="img-btn" disabled>
+  <img src="buttons fl-03.png" class="btn-img" id="next-img">
+</button>
+
+
+  <script src="bouquet.js"></script>
+  <script>
+    loadFlowerOptions();
+  </script>
+</body>
+</html>

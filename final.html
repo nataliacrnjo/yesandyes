@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Bouquet</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<a href="index.html" class="logo-link">
+  <img src="yes.png" alt="Logo" class="site-logo">
+</a>
+<body>
+  <h2>Your Bouquet</h2>
+<body onload="loadSharedBouquet(); renderBouquet();">
+
+ <div class="bouquet-wrapper">
+    <img id="accessory" class="layer accessory">
+    
+    <img id="greenery" class="layer greenery" src="greenery.png">
+
+    <!-- Flower slots -->
+    <img id="slot1" class="layer flower-slot">
+    <img id="slot2" class="layer flower-slot">
+    <img id="slot3" class="layer flower-slot">
+    <img id="slot4" class="layer flower-slot">
+    <img id="slot5" class="layer flower-slot">
+    <img id="slot6" class="layer flower-slot">
+    <img id="slot7" class="layer flower-slot">
+</div>
+
+    <div id="note-tab" class="note-tab" onclick="toggleNote()">
+      Note
+    </div>
+
+    <textarea id="note-box" class="note-box" oninput="saveNote()" placeholder="Write your note..."></textarea>
+
+  </div>
+  
+
+ <button id="new-arrangement-btn" class="img-btn" onclick="newArrangement()">
+  <img src="buttons fl-05.png" class="btn-img">
+</button>
+
+ <button id="share-btn" class="img-btn" onclick="shareBouquet()">
+    <img src="buttons fl-06.png" class="btn-img">
+  </button>
+
+  <script src="bouquet.js"></script>
+  <script>
+    renderBouquet();
+  </script>
+</body>
+</html>

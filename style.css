@@ -21,6 +21,16 @@ body {
   height: auto;
   margin-bottom: 20px;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
 .img-btn {
   background: none;
@@ -42,7 +52,8 @@ body {
 }
 
 .btn-img {
-  width: 190px;   /* adjust size */
+  width: 60vw;      /* scales with screen width */
+  max-width: 200px;
   height: auto;
   display: block;
   transition: 0.2s ease;
@@ -54,13 +65,6 @@ body {
   transform: scale(1.03);
 }
 
-
-/* Default button image */
-.btn-img {
-  width: 180px;
-  height: auto;
-  transition: 0.25s ease;
-}
 
 /* Disabled state */
 .img-btn[disabled] .btn-img {
@@ -170,6 +174,12 @@ body {
    position: absolute;
     z-index: 2;
 }
+.flower-img {
+  width: 22vw;
+  max-width: 120px;
+  height: auto;
+}
+
 .flower-slot {
     position: absolute;
     z-index: 3; /* above greenery */
@@ -225,6 +235,12 @@ body {
     top: 350px;
 }
 
+#bouquet-preview {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
 
 
 .note-tab {
@@ -255,3 +271,29 @@ body {
   cursor: not-allowed;
 }
 
+@media (max-width: 600px) {
+
+  .btn-img {
+    width: 70vw;
+    max-width: 250px;
+  }
+
+  #note-box {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .site-logo {
+    width: 90px;
+    margin-top: 10px;
+  }
+
+  #bouquet-preview {
+    max-width: 320px;
+  }
+
+  .flower-img {
+    width: 28vw;
+    max-width: 100px;
+  }
+}

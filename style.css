@@ -268,8 +268,10 @@ img {
   position: absolute;
   right: 56px;
   top: 0;
-  width: 150px;
+  width: 100%;
+  max-width: 200px;
   height: 120px;
+  font-size: 14px;
   padding: 10px;
   border: 1px solid #ccc;
   background: white;
@@ -288,11 +290,6 @@ img {
     max-width: 250px;
   }
 
-  #note-box {
-    width: 70%;
-    font-size: 16px;
-  }
-
   .site-logo {
     width: 90px;
     margin-top: 10px;
@@ -305,5 +302,14 @@ img {
   .flower-img {
     width: 28vw;
     max-width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  #note-box {
+    max-width: 90%;     /* shrink width */
+    height: 90px;       /* shrink height */
+    font-size: 16px;    /* smaller text */
+    padding: 8px;
   }
 }
